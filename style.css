@@ -13,7 +13,7 @@ body {
   */
   /*background: color image repeat position/size; */
   background: var(--bg-url) no-repeat top center/cover;
-
+  height: 100vh;
 }
 :root {
   --text-color: white;
@@ -22,8 +22,8 @@ body {
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./assets/moon-stars.svg)
-  }
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
 
 .light {
   --text-color: black;
@@ -32,12 +32,12 @@ body {
   --surface-color: rgba(0, 0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg)
+  --switch-bg-url: url(./assets/sun.svg);
 }
 
 body * {
-   font-family: "Inter", serif;
-   color: var(--text-color);
+  font-family: "Inter", serif;
+  color: var(--text-color);
 }
 
 #container {
@@ -45,17 +45,13 @@ body * {
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
-
-    
 }
+
 /* profile */
 #profile {
-  text-align: center;
-  padding: 24px;
-  
+  text-align: center;  padding: 24px;
 }
-
-#profile img{
+#profile img {
   width: 112px;
 }
 
@@ -69,7 +65,6 @@ body * {
 #switch {
   position: relative;
   width: 64px;
-
   margin: 4px auto;
 }
 
@@ -99,7 +94,7 @@ body * {
   height: 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  backdrop-filter:  blur(4px);
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
@@ -149,7 +144,6 @@ ul li a:hover {
   padding: 24px 0;
 
   font-size: 24px;
-
 }
 
 #social-links a {
@@ -170,4 +164,15 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
